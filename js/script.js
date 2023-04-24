@@ -13,7 +13,7 @@ function render()
     //seleciona a seção onde vão ficar os itens da lista
     const meusItens = element("#meusItens");
 
-    /* limpa a seção antes de renderizar tudo de volta.
+    /* limpa a seção antes de renderizar tudo de volta
     para que a lista não seja mostrada repetidamente */
     meusItens.innerHTML = "";
 
@@ -25,11 +25,16 @@ function render()
         const check = document.createElement("input");
         const div = document.createElement("div");
         const label = document.createElement("label");
+
+
+        // let contador = document.createElement("input");
+
+
         const btnExcluir = document.createElement("button");
 
         //adiciona os atributos das tags
         check.setAttribute("type", "checkbox");
-        check.setAttribute("id", pos);
+        check.setAttribute("id", pos);        
 
         linha.setAttribute("class", "linha");
         linha.setAttribute("id", "linha" + check.id);
@@ -40,10 +45,28 @@ function render()
         div.setAttribute("class", "label");
 
         label.setAttribute("for", check.id);
-        label.innerHTML = nomeDoItem;//põe o nome do item dentro do label
+        label.innerHTML = nomeDoItem;//põe o nome do item dentro do label 
+
+
+
+
+
+        // //contador
+
+        // contador.setAttribute("type", "number");
+        // contador.setAttribute("id", "contador");
+        // //contador.setAttribute("value", "00");
+
+        // contador.addEventListener("input", function() {
+        //     const value = Math.abs(contador.value);
+        //     contador.value = value;
+        //   });
+        
+
+        
 
         //põe o ícone de excluir no botão de excluir
-        btnExcluir.innerHTML = "<ion-icon name='close-outline'></ion-icon>"; //adiciona o ícone de excluir no botão
+        btnExcluir.innerHTML = "<ion-icon name='trash'></ion-icon>"; //adiciona o ícone de excluir no botão
         
         btnExcluir.setAttribute("class", "btnExcluir");
 
@@ -54,11 +77,24 @@ function render()
         linha.appendChild(check);//põe a checkbox dentro da linha
         div.appendChild(label);//põe a label dentro da div
         linha.appendChild(div);//põe a div dentro da linha
+
+
+
+        // linha.appendChild(contador);
+
+
+
+
+
         linha.appendChild(btnExcluir);//põe o botão de excluir dentro da linha
-        
+    
         meusItens.appendChild(linha);//põe a linha com todos os elementos dela dentro da seção
+
     });
 }
+
+// função altera quantidade item
+
 
 //função que vai alterar a linha quando ela for marcada
 function checked(id, state)
@@ -80,15 +116,17 @@ function addNaLista()
 {
     //pega o valor digitado pelo usuário
     const item = element("#nomeDoItem").value;
+    const item2 = element("#quantidadeDoItem").value;
     
-    if(item != "")
+    if(item != "" && item2 != "")
     {
         /* caso a caixa de texto não estiver vazia,
         ele adiciona o item no fim da lista */
-        lista.push(item);
+        lista.push(item +`( ${item2} unidades )`);
         
         //esvazia a caixa de texto para que o próximo item possa ser adicionado
         element("#nomeDoItem").value = "";
+        element("#quantidadeDoItem").value = "";
 
         //atualiza a seção para mostrar o novo item no site
         render();
@@ -96,7 +134,7 @@ function addNaLista()
     {
         /* caso a caixa de texto esteja vazia,
         ele emite um alerta para que o usuário a preencha */
-        alert("Digite um item para ser adicionado!!!");
+        alert("Digite um item e a quantidade para ser adicionado!!!");
     }
 }
 
@@ -122,9 +160,9 @@ function apagar(id)
     render();
 }
 
-
 //mostra a lista logo de cara, para caso tiver algo já adicionado, já ser visualizado
 render();
 
 //cria um disparador de evento, para quando clicar no botão, ele ativar a função de adicionar na lista
 element("#btnAdd").addEventListener("click", addNaLista);
+
