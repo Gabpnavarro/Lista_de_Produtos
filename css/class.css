@@ -1,7 +1,7 @@
 .bg-light
 {
-    background-color: #ececec;
-    
+    background-color: #f5f5f5;
+    background-image: url(img/shop.png);
 }
 
 .bg-white
@@ -10,12 +10,13 @@
     border-radius: 5px;
 }
 
-.bg-yellow
+.bg-black
 {
     background-color: rgb(40, 40, 37);
     border-radius: 5px 5px 0 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .d-flex
@@ -68,25 +69,16 @@
 .btn
 {
     height: 50px;
+    width: 20%;
     border: none;
     outline: none;
+    border-radius: 4px;
     background-color: white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     transition: .3s ease-in-out;
 }
 
-.btn:hover
-{
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05) translateX(5px);
-}
 
-.btn:active
-{
-    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.07);
-    transform: scale(1);
-    transition: .1s;
-}
 
 .card
 {
@@ -207,17 +199,5 @@
     .itens
     {
         margin-top: 170px;
-    }
-
-    .btn:hover
-    {
-        transform: scale(1) translateX(0px);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn:active
-    {
-        transform: scale(.98);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0);
     }
 }
