@@ -122,7 +122,8 @@ function addNaLista()
     {
         /* caso a caixa de texto não estiver vazia,
         ele adiciona o item no fim da lista */
-        lista.push(item +`( ${item2} unidades )`);
+        lista.push(`${item} (${item2} unidades )`);
+
         
         //esvazia a caixa de texto para que o próximo item possa ser adicionado
         element("#nomeDoItem").value = "";

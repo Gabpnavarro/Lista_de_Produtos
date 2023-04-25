@@ -200,4 +200,8 @@
     {
         margin-top: 170px;
     }
+    .bg-black{
+        border-radius: 0;
+        padding: 20px 15px;
+    }
 }
