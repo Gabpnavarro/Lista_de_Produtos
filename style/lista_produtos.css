@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+input{
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 60px;
+}
+
+p {
+    margin: 1em 3em;
+    text-align: center;
+}
+
+
+#lista-produtos{
+    margin: 10px;
+}
+
+
