@@ -118,3 +118,4 @@ function check() {
     lista.appendChild(itensSelecionados[i]);
   }
 }
+
