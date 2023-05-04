@@ -5,61 +5,72 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Produtos</title>
+  <title>Lista de Compras</title>
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/lista_produtos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+
 </head>
 
 <body>
-  <h1>Lista de Produtos</h1>
+  <h1>Lista de Compras</h1>
 
   <form>
-    <label for="produto"></label>
-    <input type="text" id="produto" placeholder="Digite o nome"><br>
+    <div class="principal">
+      <label for="produto"></label>
+      <input type="text" id="produto" placeholder="Digite o nome"><br>
 
-    <label for="quantidade"></label>
-    <input type="number" id="quantidade" placeholder="Digite a quantidade"><br>
+      <label for="quantidade"></label>
+      <input type="number" id="quantidade" placeholder="Digite a quantidade"><br>
 
-    <label for="unidade"></label>
-    <select id="unidade" name="unidade">
-      <option value="kg">Quilograma (kg)</option>
-      <option value="g">Grama (g)</option>
-      <option value="mg">Miligrama (mg)</option>
-      <option value="l">Litro (l)</option>
-      <option value="ml">Mililitro (ml)</option>
-      <option value="m">Metro (m)</option>
-      <option value="cm">Centímetro (cm)</option>
-      <option value="mm">Milímetro (mm)</option>
-      <option value="uni">Unidade (uni)</option>
-      <option value="pac">Pacote (pac)</option>
-      <option value="cx">Caixa (cx)</option>
-      <option value="ct">Cartela (ct)</option>
-      <option value="dz">Dúzia (dz)</option>
-      <option value="pot">Pote (pot)</option>
-      <option value="lat">Lata (lat)</option>
-      <option value="gar">Garrafa (gar)</option>
-    </select>
+      <label for="unidade"></label>
+      <select id="unidade" name="unidade">
+        <option value="kg">Quilograma (kg)</option>
+        <option value="g">Grama (g)</option>
+        <option value="mg">Miligrama (mg)</option>
+        <option value="l">Litro (l)</option>
+        <option value="ml">Mililitro (ml)</option>
+        <option value="m">Metro (m)</option>
+        <option value="cm">Centímetro (cm)</option>
+        <option value="mm">Milímetro (mm)</option>
+        <option value="uni">Unidade (uni)</option>
+        <option value="pac">Pacote (pac)</option>
+        <option value="cx">Caixa (cx)</option>
+        <option value="ct">Cartela (ct)</option>
+        <option value="dz">Dúzia (dz)</option>
+        <option value="pot">Pote (pot)</option>
+        <option value="lat">Lata (lat)</option>
+        <option value="gar">Garrafa (gar)</option>
+      </select>
+    </div>
 
-    <button type="button" id="botao-adicionar" disabled onclick="adicionarProduto()">Adicionar</button>
+    <div class="botoes">
+      <button type="button" id="botao-adicionar" disabled onclick="adicionarProduto()">
+      <i class="fas fa-plus"></i>
+      </button>
     
-    <button type="button" id="botao-mover-fim" onclick="check()">Organizar Lista</button>
-
+      <button type="button" id="botao-mover-fim" onclick="check()">
+      <i class="fas fa-caret-down"></i> Organizar Lista
+      </button>
+    </div>
+    
   </form>
 
   <table>
     <thead>
       <tr>
-        <td>#</td>
-        <td>Nome</td>
-        <td>Quantidade</td>
-        <td>Unidade</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td></td>
       </tr>
     </thead>
     <tbody id="tabela-produtos">
 
     </tbody>
-
   </table>
 
   <script src="cadastro-produtos.js"></script>

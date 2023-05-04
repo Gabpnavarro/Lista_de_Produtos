@@ -6,7 +6,6 @@ function adicionarProduto() {
   let quantidadeProduto = parseInt(document.getElementById("quantidade").value);
   let unidadeProduto = document.getElementById("unidade").value;
 
-
   // Verifica se a palavra já foi escrita antes, se sim soma a quantidade do produto, se não adiciona um novo produto (objeto)
   if (produtos.hasOwnProperty(nomeProduto)) {
     produtos[nomeProduto].quantidade += quantidadeProduto;
@@ -48,15 +47,21 @@ function mostrarProdutos(produto) {
   
   // Adiciona o checkbox
   const cell = itemLista.insertCell();
-  const input = document.createElement('input');
-  input.setAttribute('type', 'checkbox');
-  cell.appendChild(input);
+  const label = document.createElement('label');
+  label.setAttribute('type', 'checkbox'); 
+  label.setAttribute('class', 'container');
+  label.innerHTML= 
+    `
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    `
+  cell.appendChild(label);
 
   // Adiciona o item nome
   const cell2 = itemLista.insertCell();
   const nome = document.createElement('p');
   nome.innerHTML = produto.nome; 
-  cell2.appendChild(nome);
+  cell2.appendChild(nome);  
 
   // Adiciona o item quantidade
   const cell3 = itemLista.insertCell();
@@ -72,13 +77,18 @@ function mostrarProdutos(produto) {
 
   // Adiciona o botão de excluir
   const cell5 = itemLista.insertCell();
-  const botaoExcluir = document.createElement('button');
-  botaoExcluir.innerHTML = "Excluir";   
+  const botaoExcluir = document.createElement('button');   
   botaoExcluir.addEventListener("click", function () {
     delete produtos[produto.nome];
     itemLista.remove();
   });
   cell5.appendChild(botaoExcluir);
+
+  botaoExcluir.setAttribute('class', 'excluir');
+  const iconeLixo = document.createElement('i');
+  botaoExcluir.setAttribute('class', 'excluir');
+  iconeLixo.classList.add('fas', 'fa-trash');
+  botaoExcluir.appendChild(iconeLixo);  
 
   // Fim de adicionar produtos
 }
@@ -101,20 +111,16 @@ function validarInputs() {
 // Filtrar todos os itens selecionados
 function check() {
   const lista = document.getElementById("tabela-produtos");
-  const itensSelecionados = [];
+
 
   // Percorre a lista de itens e adiciona os selecionados no array "itensSelecionados"
   for (let i = 0; i < lista.children.length; i++) {
     const item = lista.children[i];
     const checkbox = item.querySelector("input[type=checkbox]");
 
-    if (checkbox.checked) {
-      itensSelecionados.push(item);
+    if (checkbox.checked) {      
+      lista.appendChild(item);
     }
   }
-
   // Adiciona os itens selecionados novamente no final da lista
-  for (let i = 0; i < itensSelecionados.length; i++) {
-    lista.appendChild(itensSelecionados[i]);
-  }
 }

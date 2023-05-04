@@ -1,29 +1,193 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+html{
+    background-color: black;
+    color: white;
 }
 
-input{
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    font-size: 20px;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+
 }
 
-h1{
-    font-size: 60px;
+input {
+  padding-left: 20px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+input, select {
+  background-color: #007bff;
+  border: transparent;
+}
+
+input::placeholder,
+select::placeholder {
+  color: white;
+}
+
+input:focus {
+    background-color: #007bff;
+    color: white;
+    border: transparent;
+  }
+
+h1 {
+    margin: 1em;
+  font-size: 60px;
 }
 
 p {
-    margin: 1em 3em;
-    text-align: center;
+  margin: 1em 3em;
+  text-align: center;
 }
 
-
-#lista-produtos{
-    margin: 10px;
+#lista-produtos {
+  margin-right: 10px;
 }
+
+table{
+    margin-top: 2em;
+    background-color: #1F1F1F;
+    width: 40em;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.principal{
+    display: flex;
+    justify-content: space-around;
+    width: 40em;
+    margin: 1em;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 2em;
+}
+
+input[type="number"] {
+    width: 200px;
+}
+
+select{
+    height: 3em;
+    border-radius: 5px;
+    color: white;
+}
+
+#botao-adicionar {
+  background-color: #BF87EA; 
+  color: #fff; 
+  border: none; 
+  padding: 8px 8px; 
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#botao-mover-fim {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remover borda */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+  }
+  
+  #botao-mover-fim i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto do botão */
+  }
+  
+
+.excluir{
+    background: transparent;
+    border: transparent;
+}
+
+.btn-trash {
+    background-color: #f44336; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+  
+.btn-trash i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto do botão */
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: -7px;
+    left: 2;
+    height: 25px;
+    width: 25px;
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    border: solid 2px #BF87EA;
+  }
+
+  .container:hover input ~ .checkmark {
+    background-color: #BF87EA;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: #BF87EA;
+    border: solid 0px;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+    
+  }
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+  }
 
 
