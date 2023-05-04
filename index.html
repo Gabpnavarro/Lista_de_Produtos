@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produtos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Produtos</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/lista_produtos.css">
 </head>
 
 <body>
-    <h1>Cadastro de Produtos</h1>
+  <h1>Lista de Produtos</h1>
+
+  <form>
+    <label for="produto"></label>
+    <input type="text" id="produto" placeholder="Digite o nome"><br>
+
+    <label for="quantidade"></label>
+    <input type="number" id="quantidade" placeholder="Digite a quantidade"><br>
+
+    <label for="unidade"></label>
+    <select id="unidade" name="unidade">
+      <option value="kg">Quilograma (kg)</option>
+      <option value="g">Grama (g)</option>
+      <option value="mg">Miligrama (mg)</option>
+      <option value="l">Litro (l)</option>
+      <option value="ml">Mililitro (ml)</option>
+      <option value="m">Metro (m)</option>
+      <option value="cm">Centímetro (cm)</option>
+      <option value="mm">Milímetro (mm)</option>
+      <option value="uni">Unidade (uni)</option>
+      <option value="pac">Pacote (pac)</option>
+      <option value="cx">Caixa (cx)</option>
+      <option value="ct">Cartela (ct)</option>
+      <option value="dz">Dúzia (dz)</option>
+      <option value="pot">Pote (pot)</option>
+      <option value="lat">Lata (lat)</option>
+      <option value="gar">Garrafa (gar)</option>
+    </select>
+
+    <button type="button" id="botao-adicionar" disabled onclick="adicionarProduto()">Adicionar</button>
     
-    <form>
-      <label for="produto">Produto:</label>
-      <input type="text" id="produto" name="produto"><br>
-      
-      <label for="quantidade">Quantidade:</label>
-      <input type="number" id="quantidade" name="quantidade"><br>
-      
-      <button type="button" onclick="adicionarProduto()">Adicionar</button>
-    </form>
-    
-    <ul id="lista-produtos">
-      
-    </ul>
-    
-    <script src="cadastro-produtos.js"></script>
+    <button type="button" id="botao-mover-fim" onclick="check()">Organizar Lista</button>
+
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Nome</td>
+        <td>Quantidade</td>
+        <td>Unidade</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody id="tabela-produtos">
+
+    </tbody>
+
+  </table>
+
+  <script src="cadastro-produtos.js"></script>
 </body>
+
 </html>
