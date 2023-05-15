@@ -19,7 +19,7 @@
 	<li>Somar a quantidade de itens repetidos na lista de compras.</li>
 </ul>
 <h2>Área de Designer</h2>
-<p>Autor do designer: Leonardo Dvojatzki</p>
+<p>Autor do design: Leonardo Dvojatzki</p>
 <p>Projeto de inspiração: <a href="https://www.figma.com/proto/5Jpw4mjefX5P293FbEowJB/Untitled?page-id=0%3A1&type=design&node-id=117-2&viewport=-1374%2C209%2C0.48&scaling=scale-down&starting-point-node-id=117%3A2">https://www.figma.com/proto/5Jpw4mjefX5P293FbEowJB/Untitled?page-id=0%3A1&type=design&node-id=117-2&viewport=-1374%2C209%2C0.48&scaling=scale-down&starting-point-node-id=117%3A2</a></p>
 <p>Status: em andamento</p>
 
