@@ -1,4 +1,4 @@
-<h1>Projeto de Lista de Compras</h1>
+<h1>Lista de Compras</h1>
 <p>Apresento a vocês o resultado dos meus estudos recentes na Alura! Nas últimas semanas, tive a oportunidade de aprimorar meus conhecimentos em JavaScript e, graças às ideias dos meus mentores, participei de um desafio.</p>
 <p>O desafio consistia em criar uma lista de compras com campos para adicionar o nome do item e a quantidade desejada, além de uma opção para marcar e excluir os itens da lista. Adicionalmente, também me propus a adicionar um botão para organizar a lista e uma função para somar os itens repetidos.</p>
 <h2>Tecnologias Utilizadas</h2>
