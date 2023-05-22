@@ -8,7 +8,7 @@
 	<li>JavaScript</li>
 </ul>
 <h2>Como usar</h2>
-<p>Para utilizar o projeto, basta clonar o repositório em <a href="https://github.com/Gabpnavarro/lista">https://github.com/Gabpnavarro/lista</a> e abrir o <em>live server</em>.</p>
+<p>Para utilizar o projeto, basta clonar o repositório com o <code>git clone https://github.com/Gabpnavarro/Lista_de_Produtos.git</code>, abrir o seu VS Code e abrir o <em>live server</em>.</p>
 <h2>Funcionalidades</h2>
 <p>O projeto conta com as seguintes funcionalidades:</p>
 <ul>
