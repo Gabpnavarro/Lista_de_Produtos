@@ -1,193 +1,263 @@
-html{
-    background-color: black;
-    color: white;
+h1 {
+  margin: 1em 0;
+  font-size: 20px;
+}
+
+.titulo {
+  text-align: left;
+}
+
+.botoes-superiores {
+  display: flex;
+  justify-content: space-between;
+}
+
+.excluir-marcados{
+  background: transparent;
+  color: white;
+  border: transparent;
+  padding: 0;
+  border-bottom: 1px solid red;
+}
+
+#botao-mover-fim {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-bottom: solid 1px;
+  padding: 2px 0;
+}
+
+#botao-mover-fim i {
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto do botão */
+}
+
+/* body */
+table {
+  margin-top: 2em;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  width: 300px;
+}
+
+tr{
+  display: flex;
+  justify-content: space-between;
+}
+
+tbody>td:first-of-type{
+  padding: 2em;
+}
+
+html {
+  background-color: black;
+  color: white;
 }
 
 body {
   display: flex;
+  width: 300px;
   flex-direction: column;
-  align-items: center;
   margin: 0 auto;
-  font-family: 'Lato', sans-serif;
-
-}
-
-input {
-  padding-left: 20px;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
-
-input, select {
-  background-color: #007bff;
-  border: transparent;
-}
-
-input::placeholder,
-select::placeholder {
-  color: white;
-}
-
-input:focus {
-    background-color: #007bff;
-    color: white;
-    border: transparent;
-  }
-
-h1 {
-    margin: 1em;
-  font-size: 60px;
+  font-family: "Lato", sans-serif;
 }
 
 p {
-  margin: 1em 3em;
-  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-#lista-produtos {
-  margin-right: 10px;
+input {
+  padding-left: 1em;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
-table{
-    margin-top: 2em;
-    background-color: #1F1F1F;
-    width: 40em;
-    padding: 5px;
-    border-radius: 5px;
+input,
+select {
+  background-color: transparent;
+  border: black 1px solid;
+  color: black;
 }
 
-.principal{
-    display: flex;
-    justify-content: space-around;
-    width: 40em;
-    margin: 1em;
-}
-
-.botoes{
-    display: flex;
-    justify-content: space-around;
-}
-
-input[type="text"] {
-    width: 200px;
-    height: 2em;
-}
-
-input[type="number"] {
-    width: 200px;
-}
-
-select{
-    height: 3em;
-    border-radius: 5px;
-    color: white;
-}
-
-#botao-adicionar {
-  background-color: #BF87EA; 
-  color: #fff; 
-  border: none; 
-  padding: 8px 8px; 
-  border-radius: 50%;
+button{
   cursor: pointer;
 }
 
-#botao-mover-fim {
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Remover borda */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    border-radius: 4px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
-  }
-  
-  #botao-mover-fim i {
-    margin-right: 5px; /* Espaçamento entre o ícone e o texto do botão */
-  }
-  
-
-.excluir{
-    background: transparent;
-    border: transparent;
+#mostrar-form{
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  background-color: #bf87ea;
+  color: #fff;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
 }
 
-.btn-trash {
-    background-color: #f44336; 
-    color: #fff; 
-    border: none; 
-    padding: 10px 20px; 
-    border-radius: 4px; 
-    cursor: pointer; 
+.excluir {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-right: 2px;
 }
-  
-.btn-trash i {
-    margin-right: 5px; /* Espaçamento entre o ícone e o texto do botão */
+
+.excluir > img{
+  width: 16px;
 }
 
 .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
-  .checkmark {
-    position: absolute;
-    top: -7px;
-    left: 2;
-    height: 25px;
-    width: 25px;
-    background-color: #1F1F1F;
-    border-radius: 50%;
-    border: solid 2px #BF87EA;
-  }
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  height: 25px;
+  width: 25px;
+  border-radius: 8px;
+  border: solid 1px black;
+}
 
-  .container:hover input ~ .checkmark {
-    background-color: #BF87EA;
-  }
+.container:hover input ~ .checkmark {
+  background-color: white;
+}
 
-  .container input:checked ~ .checkmark {
-    background-color: #BF87EA;
-    border: solid 0px;
-  }
+.container input:checked ~ .checkmark {
+  background-color: white;
+  border: solid 0px;
+}
 
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 
-  .container input:checked ~ .checkmark:after {
-    display: block;
-    
-  }
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
 
-  .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid rgb(0, 0, 0);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+.container .checkmark:after {
+  left: 12px;
+  top: 8px;
+  width: 5px;
+  height: 10px;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
-  }
+#meu-form{
+  width: 300px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  background: white;
+  border-radius: 8px;
+  z-index: 10;
+}
 
+label{
+  color: black;
+  margin-bottom: 1em;
+}
 
+#meu-form>h2{
+  background: #bf87ea;
+  padding: 1em;
+  border-radius: 8px 8px 0 0;
+  color: white;
+}
+
+.horizontal{
+  width: 262px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical{
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 1em;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="text"] {
+  width: 240px;
+  padding-left: 1em;
+  height: 2em;
+  color: black;
+}
+
+input[type="number"] {
+  width: 90px;
+  height: 2em;
+  color: black;
+}
+
+select {
+  height: 44px;
+  border-radius: 5px;
+  color: black;
+  width: 120px;
+}
+
+.botao-adicionar{
+  display: flex;
+  justify-content: flex-end;
+  width: 278px;
+}
+#botao-adicionar-item{
+  background-color: #bf87ea;
+  border: transparent;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 5px;
+  font-weight: 600;
+  color: white;
+}
+
+#mostrar-form button{
+  background-color: #bf87ea;
+  border: transparent;
+}

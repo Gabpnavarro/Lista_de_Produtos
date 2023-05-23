@@ -7,70 +7,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Compras</title>
   <link rel="stylesheet" href="style/reset.css">
+  <link rel="shortcut icon" href="./style/img/carrinho-de-compras-2.png" type="image/x-icon">
   <link rel="stylesheet" href="style/lista_produtos.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  
+
+
 
 </head>
 
 <body>
-  <h1>Lista de Compras</h1>
+  <div class="titulo">
+    <h1>Lista de Compras</h1>
+  </div>
 
-  <form>
-    <div class="principal">
-      <label for="produto"></label>
-      <input type="text" id="produto" placeholder="Digite o nome"><br>
+  <div class="botoes-superiores">
 
-      <label for="quantidade"></label>
-      <input type="number" id="quantidade" placeholder="Digite a quantidade"><br>
+    <button type="button" class="excluir-marcados" id="botaoexcluir" onclick="excluirItens()">
+      Excluir Marcados
+    </button>
 
-      <label for="unidade"></label>
-      <select id="unidade" name="unidade">
-        <option value="kg">Quilograma (kg)</option>
-        <option value="g">Grama (g)</option>
-        <option value="mg">Miligrama (mg)</option>
-        <option value="l">Litro (l)</option>
-        <option value="ml">Mililitro (ml)</option>
-        <option value="m">Metro (m)</option>
-        <option value="cm">Centímetro (cm)</option>
-        <option value="mm">Milímetro (mm)</option>
-        <option value="uni">Unidade (uni)</option>
-        <option value="pac">Pacote (pac)</option>
-        <option value="cx">Caixa (cx)</option>
-        <option value="ct">Cartela (ct)</option>
-        <option value="dz">Dúzia (dz)</option>
-        <option value="pot">Pote (pot)</option>
-        <option value="lat">Lata (lat)</option>
-        <option value="gar">Garrafa (gar)</option>
-      </select>
+    <button type="button" class="organizar-lista" id="botao-mover-fim" onclick="check()">
+      Organizar <i class="fas fa-caret-down"></i>
+    </button>
+  </div>
+
+  <div id="meu-form">
+    <h2>Adicionar item</h2>
+
+    <form>
+      <div class="principal">
+        <label for="produto">Nome</label>
+        <input type="text" id="produto"><br>
+
+        <div class="horizontal">
+
+          <div class="vertical">
+            <label for="quantidade">Quantidade</label>
+            <input type="number" id="quantidade"><br>
+          </div>
+
+          <div class="vertical">
+            <label for="unidade">Medida</label>
+            <select id="unidade" name="unidade">
+              <option value="kg">Quilograma (kg)</option>
+              <option value="g">Grama (g)</option>
+              <option value="mg">Miligrama (mg)</option>
+              <option value="l">Litro (l)</option>
+              <option value="ml">Mililitro (ml)</option>
+              <option value="m">Metro (m)</option>
+              <option value="cm">Centímetro (cm)</option>
+              <option value="mm">Milímetro (mm)</option>
+              <option value="uni">Unidade (uni)</option>
+              <option value="cx">Caixa (cx)</option>
+              <option value="lat">Lata (lat)</option>
+              <option value="gar">Garrafa (gar)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="botao-adicionar">
+      <button type="button" id="botao-adicionar-item" onclick="adicionarProduto()" disabled>
+        Adicionar
+      </button>
     </div>
 
-    <div class="botoes">
-      <button type="button" id="botao-adicionar" disabled onclick="adicionarProduto()">
-      <i class="fas fa-plus"></i>
-      </button>
     
-      <button type="button" id="botao-mover-fim" onclick="check()">
-      <i class="fas fa-caret-down"></i> Organizar Lista
-      </button>
-    </div>
-    
-  </form>
+  </div>
+
+  <!-- <div class="botoes-excluir-marcados">
+    <button type="button">
+      Excluir Itens Marcados
+    </button>
+    <button type="button">
+      Cancelar
+    </button>
+  </div> -->
+
+  <div class="botoes" id="mostrar-form">
+    <button type="button">
+      <i class="fas fa-minus"></i>
+    </button>
+  </div>
+
 
   <table>
+
     <thead>
       <tr>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
+        <div>
+          <td></td>
+          <td></td>
+        </div>
         <td></td>
       </tr>
     </thead>
     <tbody id="tabela-produtos">
-
     </tbody>
+
   </table>
 
   <script src="cadastro-produtos.js"></script>

@@ -85,17 +85,34 @@ function mostrarProdutos(produto) {
   cell5.appendChild(botaoExcluir);
 
   botaoExcluir.setAttribute('class', 'excluir');
-  const iconeLixo = document.createElement('i');
-  botaoExcluir.setAttribute('class', 'excluir');
-  iconeLixo.classList.add('fas', 'fa-trash');
-  botaoExcluir.appendChild(iconeLixo);  
+  const imagemLixo = document.createElement('img');
+  imagemLixo.setAttribute('src', './style/img/excluir.png');
+  imagemLixo.setAttribute('alt', 'Ícone de Lixo');
+  botaoExcluir.appendChild(imagemLixo);  
 
   // Fim de adicionar produtos
 }
 
+function excluirItemLista(nomeItem) {
+  delete produtos[nomeItem];
+  const itemLista = document.getElementById(nomeItem);
+  itemLista.remove();
+}
+
+function excluirItens() {
+  const listaItens = document.querySelectorAll("#tabela-produtos tr");
+  listaItens.forEach(function (itemLista) {
+    const checkbox = itemLista.querySelector("input[type='checkbox']");
+    if (checkbox.checked) {
+      const nomeItem = itemLista.id;
+      excluirItemLista(nomeItem);
+    }
+  });
+}
+
 let inputProduto = document.getElementById("produto");
 let inputQuantidade = document.getElementById("quantidade");
-let botaoAdicionar = document.getElementById("botao-adicionar");
+let botaoAdicionar = document.getElementById("botao-adicionar-item");
 
 inputProduto.addEventListener("input", validarInputs);
 inputQuantidade.addEventListener("input", validarInputs);
@@ -124,3 +141,23 @@ function check() {
   }
   // Adiciona os itens selecionados novamente no final da lista
 }
+
+// Obtém o elemento do botão e do formulário
+var botao = document.getElementById("mostrar-form");
+var formulario = document.getElementById("meu-form");
+
+// Adiciona um ouvinte de evento ao botão
+botao.addEventListener("click", function() {
+  formulario.style.display = (formulario.style.display === "none") ? "block" : "none";
+  icone.classList.toggle("fa-plus");
+  icone.classList.toggle("fa-minus");
+});
+
+var botaomostrarform = document.getElementById("mostrar-form");
+var icone = botaomostrarform.querySelector("i");
+
+botao.addEventListener("click", function() {
+  icone.classList.toggle("fas fa-plus");
+  icone.classList.toggle("fas fa-minus");
+});
+
