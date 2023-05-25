@@ -277,6 +277,7 @@ select {
 }
 
 .excluir-todos-marcados{
+  display: none;
   z-index: 50;
   position: fixed;
   left: 50%;
