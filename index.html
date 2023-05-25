@@ -23,7 +23,7 @@
 
   <div class="botoes-superiores">
 
-    <button type="button" class="excluir-marcados" id="botaoexcluir" onclick="excluirItens()">
+    <button type="button" class="excluir-marcados" id="botaoexcluir">
       Excluir Marcados
     </button>
 
@@ -74,17 +74,20 @@
       </button>
     </div>
 
-    
+
   </div>
 
-  <!-- <div class="botoes-excluir-marcados">
-    <button type="button">
-      Excluir Itens Marcados
-    </button>
-    <button type="button">
-      Cancelar
-    </button>
-  </div> -->
+  <div class="excluir-todos-marcados">
+    <h2>Excluir todos os itens marcados</h2>
+    <div class="botoes-excluir-marcados">
+      <button type="button" id="cancelar">
+        Cancelar
+      </button>
+      <button type="button" id="excluir" onclick="excluirItens()">
+        Excluir
+      </button>
+    </div>
+  </div>
 
   <div class="botoes" id="mostrar-form">
     <button type="button">

@@ -150,7 +150,6 @@ var formulario = document.getElementById("meu-form");
 botao.addEventListener("click", function() {
   formulario.style.display = (formulario.style.display === "none") ? "block" : "none";
   icone.classList.toggle("fa-plus");
-  icone.classList.toggle("fa-minus");
 });
 
 var botaomostrarform = document.getElementById("mostrar-form");
@@ -158,6 +157,25 @@ var icone = botaomostrarform.querySelector("i");
 
 botao.addEventListener("click", function() {
   icone.classList.toggle("fas fa-plus");
-  icone.classList.toggle("fas fa-minus");
 });
+
+// Obtém o elemento do botão e do formulário
+var botaoexcluirtodos = document.getElementsByClassName("excluir-marcados")[0];
+var abaexcluir = document.getElementsByClassName("excluir-todos-marcados")[0];
+var botaoexclusao = document.getElementById("excluir")
+var botaocancelar = document.getElementById("cancelar")
+
+// Adiciona um ouvinte de evento ao botão
+botaoexcluirtodos.addEventListener("click", function() {
+  abaexcluir.style.display = (abaexcluir.style.display === "block") ? "none" : "block";
+});
+
+botaocancelar.addEventListener("click", function() {
+  abaexcluir.style.display = (abaexcluir.style.display === "block") ? "none" : "block";
+});
+
+botaoexclusao.addEventListener("click", function() {
+  abaexcluir.style.display = (abaexcluir.style.display === "block") ? "none" : "block";
+});
+
 

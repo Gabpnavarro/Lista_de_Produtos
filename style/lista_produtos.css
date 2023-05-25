@@ -1,6 +1,6 @@
 h1 {
   margin: 1em 0;
-  font-size: 20px;
+  font-size: 32px;
 }
 
 .titulo {
@@ -10,6 +10,10 @@ h1 {
 .botoes-superiores {
   display: flex;
   justify-content: space-between;
+}
+
+.botoes-superiores button{
+  font-size: 16px;
 }
 
 .excluir-marcados{
@@ -70,16 +74,13 @@ p {
 }
 
 input {
-  padding-left: 1em;
   border-radius: 5px;
   font-size: 20px;
 }
 
 input,
 select {
-  background-color: transparent;
   border: black 1px solid;
-  color: black;
 }
 
 button{
@@ -88,7 +89,7 @@ button{
 
 #mostrar-form{
   position: fixed;
-  bottom: 5%;
+  bottom: 1%;
   left: 50%;
   transform: translate(-50%, -50%);  
   background-color: #bf87ea;
@@ -221,43 +222,104 @@ label{
   display: flex;
   justify-content: space-around;
 }
-
+input{
+  padding: 0 0 0 16px ;
+}
 input[type="text"] {
-  width: 240px;
-  padding-left: 1em;
+  width: 234px;
   height: 2em;
-  color: black;
 }
 
 input[type="number"] {
-  width: 90px;
+  width: 102px;
   height: 2em;
-  color: black;
 }
 
 select {
   height: 44px;
   border-radius: 5px;
-  color: black;
-  width: 120px;
+  width: 109px;
 }
 
 .botao-adicionar{
   display: flex;
   justify-content: flex-end;
-  width: 278px;
+  width: 265px;
 }
+
 #botao-adicionar-item{
   background-color: #bf87ea;
   border: transparent;
   border-radius: 5px;
   margin-bottom: 1em;
-  padding: 5px;
+  padding: 10px;
+  font-size: 16px;
   font-weight: 600;
   color: white;
 }
 
+#botao-adicionar-item:active{
+  background-color: black;
+  border: transparent;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+
 #mostrar-form button{
   background-color: #bf87ea;
   border: transparent;
+  color: black;
+}
+
+.excluir-todos-marcados{
+  z-index: 50;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%); 
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  min-width: 300px;
+  max-width: 600px;
+  height: auto;
+  color: black;
+  flex-direction: column;
+  border-radius: 5px 5px 0 0;
+}
+
+.excluir-todos-marcados h2{
+  padding: 1em;
+}
+
+.botoes-excluir-marcados{
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+#cancelar{
+  background: #bf87ea;
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+  font-weight: 700;
+  width: 85px;
+  height: 26px;
+}
+
+#excluir{
+  background: #DB0000;
+  color: white;
+  border: transparent;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 85px;
+  height: 26px;
 }
