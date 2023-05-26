@@ -1,6 +1,7 @@
 <h1>Lista de Compras</h1>
 <p>Apresento a vocês o resultado dos meus estudos recentes na Alura! Nas últimas semanas, tive a oportunidade de aprimorar meus conhecimentos em JavaScript e, graças às ideias dos meus mentores, participei de um desafio.</p>
-<p>O desafio consistia em criar uma lista de compras com campos para adicionar o nome do item e a quantidade desejada, além de uma opção para marcar e excluir os itens da lista. Adicionalmente, também me propus a adicionar um botão para organizar a lista e uma função para somar os itens repetidos.</p>
+<p>O desafio consistia em criar uma lista de compras com campos para adicionar o nome do item e a quantidade desejada, além de uma opção para marcar e excluir os itens da lista. Adicionalmente, me propus a adicionar funções extras que podem ser vistar no tópito de funcionalidades.</p>
+
 <h2>Tecnologias Utilizadas</h2>
 <ul>
 	<li>HTML</li>
@@ -8,7 +9,7 @@
 	<li>JavaScript</li>
 </ul>
 <h2>Como usar</h2>
-<p>Para utilizar o projeto, basta clonar o repositório com o <code>git clone https://github.com/Gabpnavarro/Lista_de_Produtos.git</code>, abrir o seu VS Code e abrir o <em>live server</em>.</p>
+<p>Para ter o projeto em sua maquina, basta clonar o repositório com o código: <code>git clone https://github.com/Gabpnavarro/Lista_de_Produtos.git</code>.</p>
 <h2>Funcionalidades</h2>
 <p>O projeto conta com as seguintes funcionalidades:</p>
 <ul>
