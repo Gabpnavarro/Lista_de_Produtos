@@ -264,7 +264,8 @@ select {
   border-radius: 5px;
   margin-bottom: 1em;
   padding: 10px;
-  font-size: 16px;
+  transition: 500ms;
+  font-size: 18px;
   font-weight: 600;
   color: white;
 }
@@ -273,6 +274,10 @@ select {
 #mostrar-form button{
   background-color: #bf87ea;
   border: transparent;
+  color: black;
+}
+
+.fa-minus, .fa-plus {
   color: black;
 }
 

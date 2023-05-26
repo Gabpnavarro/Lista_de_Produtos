@@ -63,6 +63,9 @@ function mostrarProdutos(produto) {
   nome.innerHTML = produto.nome; 
   cell2.appendChild(nome);  
 
+  const divisao = document.createElement('div');
+  const agruparquantunid = document.createElement('div');
+
   // Adiciona o item quantidade
   const cell3 = itemLista.insertCell();
   const quantidade = document.createElement('p');
@@ -110,6 +113,7 @@ function excluirItens() {
   });
 }
 
+
 let inputProduto = document.getElementById("produto");
 let inputQuantidade = document.getElementById("quantidade");
 let botaoAdicionar = document.getElementById("botao-adicionar-item");
@@ -142,24 +146,29 @@ function check() {
   // Adiciona os itens selecionados novamente no final da lista
 }
 
-// Obtém o elemento do botão e do formulário
+// Obtém o elemento do botão de mostrar formulário e do formulário
 var botao = document.getElementById("mostrar-form");
 var formulario = document.getElementById("meu-form");
 
-// Adiciona um ouvinte de evento ao botão
+// Adiciona um ouvinte para que a aba do input aparece e desapareça, e a troca do icone + e - troquem ao clicar
 botao.addEventListener("click", function() {
-  formulario.style.display = (formulario.style.display === "none") ? "block" : "none";
-  icone.classList.toggle("fa-plus");
+  formulario.style.display = (formulario.style.display === "block") ? "none" : "block";
+  
+  if (icone.classList.contains("fa-plus")) {
+    icone.classList.remove("fa-plus");
+    icone.classList.add("fa-minus");
+  } else if (icone.classList.contains("fa-minus")) {
+    icone.classList.remove("fa-minus");
+    icone.classList.add("fa-plus");
+  }
+
 });
 
 var botaomostrarform = document.getElementById("mostrar-form");
 var icone = botaomostrarform.querySelector("i");
 
-botao.addEventListener("click", function() {
-  icone.classList.toggle("fas fa-plus");
-});
 
-// Obtém o elemento do botão e do formulário
+// Obtém o elemento do botão de excluir itens marcados
 var botaoexcluirtodos = document.getElementsByClassName("excluir-marcados")[0];
 var abaexcluir = document.getElementsByClassName("excluir-todos-marcados")[0];
 var botaoexclusao = document.getElementById("excluir")
@@ -177,5 +186,6 @@ botaocancelar.addEventListener("click", function() {
 botaoexclusao.addEventListener("click", function() {
   abaexcluir.style.display = (abaexcluir.style.display === "block") ? "none" : "block";
 });
+
 
 
