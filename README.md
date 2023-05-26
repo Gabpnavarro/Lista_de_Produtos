@@ -12,11 +12,13 @@
 <h2>Funcionalidades</h2>
 <p>O projeto conta com as seguintes funcionalidades:</p>
 <ul>
-	<li>Criar novos itens na lista de compras, informando o nome, unidade e a quantidade desejada;</li>
-	<li>Marcar e desmarcar itens da lista como comprados;</li>
-	<li>Excluir itens da lista de compras;</li>
+	<li>Criar novos itens na lista de compras, informando o nome, medida e a quantidade desejada;</li>
+	<li>Marcar e desmarcar itens;</li>
+	<li>Excluir itens especificamente;</li>
 	<li>Organizar a lista em ordem de marcados e não marcados;</li>
-	<li>Somar a quantidade de itens repetidos na lista de compras.</li>
+	<li>Somar a quantidade de itens repetidos.</li>
+	<li>Desabilitar o botão de adicionar, caso não tenha o nome e quantidade digitada.</li>
+	<li>Excluir todos os itens marcados.</li>
 </ul>
 <h2>Área de Designer</h2>
 <p>Autor do design: Leonardo Dvojatzki</p>
